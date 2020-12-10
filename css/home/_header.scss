@@ -1,0 +1,110 @@
+.header {
+  display: flex;
+  @include d-flex("", space-between);
+  width: 100vw;
+  height: 100px;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+
+  .logo {
+    height: 150px;
+    width: 150px;
+    cursor: pointer;
+    transform: translateX(-200px);
+    transition: 2s all ease;
+  }
+
+  .topNavbar ul {
+    display: flex;
+    @include d-flex(row, space-between);
+    list-style: none;
+    margin: 0px 30px;
+    transform: translateX(500px);
+    transition: 2s all ease;
+  }
+
+  li {
+    color: $primary-color;
+    border-bottom: 5px solid $primary-color;
+    font-size: 2rem;
+    margin: 3px 8px;
+    line-height: 25px;
+    transition: 0.3s all ease;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+
+    a {
+      color: $primary-color;
+      text-decoration: none;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    .logo {
+      height: 70px;
+      width: 70px;
+    }
+
+    ul li {
+      font-size: 1.3rem;
+      line-height: 15px;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    .hamBurger {
+      display: inline-block;
+      position: fixed;
+      top: 5%;
+      right: 10%;
+      z-index: 1000;
+      cursor: pointer;
+
+      .one,
+      .two,
+      .three {
+        width: 35px;
+        height: 5px;
+        background-color: $primary-color;
+        margin: 6px 0;
+        transition: 0.4s;
+      }
+    }
+
+    .change .one{
+      transform: rotate(-45deg) translate(-9px, 6px);
+    }
+
+    .change .two{
+      opacity: 0;
+    }
+
+    .change .three{
+      transform: rotate(45deg) translate(-8px, -8px);
+    }
+    
+    .topNavbar {
+      width: 100%;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      background-color: $secondary-color;
+      z-index: 999;
+      transition: 0.5s all ease-in-out;
+
+      ul {
+        height: 80vh;
+        display: flex;
+        @include d-flex(column);
+        z-index: 888;
+
+        li {
+          margin: 20px 0px;
+        }
+      }
+    }
+  }
+}

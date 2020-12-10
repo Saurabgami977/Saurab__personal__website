@@ -1,0 +1,52 @@
+.contactBox {
+  display: flex;
+  @include d-flex("", center, center);
+  width: 100%;
+
+  .left {
+    width: 50vw;
+    height: 100vh;
+    background-color: $grey-color;
+    display: flex;
+    cursor: pointer;
+    @include d-flex();
+
+    &:hover button {
+      border-radius: 1px;
+      padding: 10px;
+      height: 150px;
+      width: 250px;
+    }
+    @include btn($secondary-color);
+  }
+
+  .right {
+    width: 50vw;
+    height: 100vh;
+    background-color: $secondary-color;
+    display: flex;
+    cursor: pointer;
+    @include d-flex();
+
+    &:hover button {
+      border-radius: 1px;
+      padding: 10px;
+      height: 150px;
+      width: 250px;
+    }
+
+    @include btn($primary-color);
+  }
+}
+@media screen and (max-width: 500px) {
+    .contactBox{
+        @include d-flex(column);
+
+        .left{
+            width: 100vw;
+        }
+        .right{
+            width: 100vw;
+        }
+    }
+}

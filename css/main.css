@@ -1,0 +1,578 @@
+@import url("https://fonts.googleapis.com/css2?family=Nerko+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Nerko One", cursive;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*::-moz-selection {
+  color: #009688;
+  background-color: black;
+  cursor: pointer;
+}
+
+*::selection {
+  color: #009688;
+  background-color: black;
+  cursor: pointer;
+}
+
+body {
+  background-color: white;
+  height: 500vh;
+  z-index: 3;
+}
+
+body #main {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(#009688)), url(../img/bg.jpg) center center/cover fixed;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), #009688), url(../img/bg.jpg) center center/cover fixed;
+  height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body #main .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: "";
+          flex-direction: "";
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100vw;
+  height: 100px;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+}
+
+body #main .header .logo {
+  height: 150px;
+  width: 150px;
+  cursor: pointer;
+  -webkit-transform: translateX(-200px);
+          transform: translateX(-200px);
+  -webkit-transition: 2s all ease;
+  transition: 2s all ease;
+}
+
+body #main .header .topNavbar ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+  margin: 0px 30px;
+  -webkit-transform: translateX(500px);
+          transform: translateX(500px);
+  -webkit-transition: 2s all ease;
+  transition: 2s all ease;
+}
+
+body #main .header li {
+  color: white;
+  border-bottom: 5px solid white;
+  font-size: 2rem;
+  margin: 3px 8px;
+  line-height: 25px;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+}
+
+body #main .header li:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+body #main .header li a {
+  color: white;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 800px) {
+  body #main .header .logo {
+    height: 70px;
+    width: 70px;
+  }
+  body #main .header ul li {
+    font-size: 1.3rem;
+    line-height: 15px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  body #main .header .hamBurger {
+    display: inline-block;
+    position: fixed;
+    top: 5%;
+    right: 10%;
+    z-index: 1000;
+    cursor: pointer;
+  }
+  body #main .header .hamBurger .one,
+  body #main .header .hamBurger .two,
+  body #main .header .hamBurger .three {
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+  body #main .header .change .one {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+            transform: rotate(-45deg) translate(-9px, 6px);
+  }
+  body #main .header .change .two {
+    opacity: 0;
+  }
+  body #main .header .change .three {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+            transform: rotate(45deg) translate(-8px, -8px);
+  }
+  body #main .header .topNavbar {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    background-color: #009688;
+    z-index: 999;
+    -webkit-transition: 0.5s all ease-in-out;
+    transition: 0.5s all ease-in-out;
+  }
+  body #main .header .topNavbar ul {
+    height: 80vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    z-index: 888;
+  }
+  body #main .header .topNavbar ul li {
+    margin: 20px 0px;
+  }
+}
+
+body #main .myName {
+  color: white;
+  font-size: 9rem;
+  font-weight: 10;
+  -webkit-transform: translateY(400px);
+          transform: translateY(400px);
+  -webkit-transition: 2s all ease;
+  transition: 2s all ease;
+}
+
+body #main .myIntro {
+  color: white;
+  font-size: 2rem;
+  -webkit-transform: translateY(400px);
+          transform: translateY(400px);
+  -webkit-transition: 2s all ease;
+  transition: 2s all ease;
+  font-family: "Roboto", sans-serif;
+}
+
+@media screen and (max-width: 800px) {
+  body #main .myName {
+    font-size: 5rem;
+  }
+  body #main .myIntro {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  body #main .myName {
+    font-size: 3rem;
+    z-index: 1;
+  }
+  body #main .myIntro {
+    font-size: 1rem;
+    z-index: 1;
+  }
+}
+
+body #main .banner-btn {
+  margin: 70px auto 0;
+  -webkit-transform: translateY(400px);
+          transform: translateY(400px);
+  -webkit-transition: 2s all ease;
+  transition: 2s all ease;
+}
+
+body #main .banner-btn a {
+  width: 150px;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  font-size: 1.3rem;
+  margin: 0px 10px;
+  padding: 12px 0;
+  color: white;
+  border: 3px solid white;
+  position: relative;
+  z-index: 1;
+}
+
+body #main .banner-btn a:hover span {
+  width: 101%;
+}
+
+body #main .banner-btn a:hover {
+  color: black;
+}
+
+body #main .banner-btn a span {
+  width: 0;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: white;
+  z-index: -1;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+@media screen and (max-width: 500px) {
+  body #main .banner-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body #main .banner-btn a {
+    margin: 10px 0px;
+    font-size: 1rem;
+    padding: 6px 0px;
+    width: 80px;
+  }
+}
+
+body #about {
+  height: 100vh;
+  width: 100vw;
+  background-color: #e7e3e3;
+  margin: 0px auto;
+  padding: 70px 0;
+}
+
+body #about .title {
+  text-align: center;
+}
+
+body #about .title h5 {
+  margin: auto;
+  font-size: 2rem;
+  color: #009688;
+  font-weight: 100;
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+}
+
+body #about .title h5::after {
+  content: "";
+  width: 50px;
+  height: 35px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#009688), to(white));
+  background: linear-gradient(#009688, white);
+  position: absolute;
+  left: 0;
+  top: -20px;
+  z-index: -1;
+  -webkit-transform: rotate(10deg);
+          transform: rotate(10deg);
+  border-top-left-radius: 35px;
+  border-bottom-right-radius: 35px;
+}
+
+body #about .title h2 {
+  font-size: 4rem;
+  font-family: "Roboto", sans-serif;
+}
+
+body #about #aboutMe {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+}
+
+body #about #aboutMe .introduction {
+  width: 40%;
+}
+
+body #about #aboutMe .introduction h2 {
+  font-size: 3rem;
+  line-height: 50px;
+}
+
+body #about #aboutMe .introduction h4 {
+  font-size: 1.5rem;
+  font-family: "Roboto", sans-serif;
+}
+
+body #about #aboutMe .introduction p {
+  font-size: 1.1rem;
+  font-family: "Roboto", sans-serif;
+}
+
+@media screen and (max-width: 500px) {
+  body #about #aboutMe .introduction h2 {
+    font-size: 2rem;
+    line-height: 30px;
+  }
+  body #about #aboutMe .introduction h4 {
+    font-size: 1.3rem;
+  }
+  body #about #aboutMe .introduction p {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+}
+
+body #about #aboutMe .aboutImg {
+  max-width: 40%;
+  border-radius: 10px;
+  -webkit-clip-path: polygon(6% 22%, 100% 0, 100% 100%, 93% 79%, 0 100%, 0 46%, 0 0);
+          clip-path: polygon(6% 22%, 100% 0, 100% 100%, 93% 79%, 0 100%, 0 46%, 0 0);
+}
+
+@media screen and (max-width: 500px) {
+  body #about #aboutMe {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body #about #aboutMe .introduction {
+    width: 100vw;
+    padding: 0px 55px;
+    height: 50vh;
+  }
+}
+
+body #contact {
+  height: 100vh;
+  width: 100vw;
+}
+
+body #contact .contactBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: "";
+          flex-direction: "";
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+body #contact .contactBox .left {
+  width: 50vw;
+  height: 100vh;
+  background-color: #e7e3e3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body #contact .contactBox .left:hover button {
+  border-radius: 1px;
+  padding: 10px;
+  height: 150px;
+  width: 250px;
+}
+
+body #contact .contactBox .left button {
+  background: none;
+  border: 10px solid #009688;
+  border-radius: 50%;
+  padding: 50px;
+  height: 300px;
+  width: 300px;
+  cursor: pointer;
+  outline: none;
+  -webkit-transition: 0.3s all ease-in-out;
+  transition: 0.3s all ease-in-out;
+}
+
+body #contact .contactBox .left button a {
+  text-decoration: none;
+  color: #009688;
+}
+
+body #contact .contactBox .left button a p {
+  font-size: 1.4rem;
+}
+
+body #contact .contactBox .left button a h1 {
+  font-size: 2rem;
+  font-weight: 100;
+  font-family: "Roboto", sans-serif;
+}
+
+body #contact .contactBox .right {
+  width: 50vw;
+  height: 100vh;
+  background-color: #009688;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body #contact .contactBox .right:hover button {
+  border-radius: 1px;
+  padding: 10px;
+  height: 150px;
+  width: 250px;
+}
+
+body #contact .contactBox .right button {
+  background: none;
+  border: 10px solid white;
+  border-radius: 50%;
+  padding: 50px;
+  height: 300px;
+  width: 300px;
+  cursor: pointer;
+  outline: none;
+  -webkit-transition: 0.3s all ease-in-out;
+  transition: 0.3s all ease-in-out;
+}
+
+body #contact .contactBox .right button a {
+  text-decoration: none;
+  color: white;
+}
+
+body #contact .contactBox .right button a p {
+  font-size: 1.4rem;
+}
+
+body #contact .contactBox .right button a h1 {
+  font-size: 2rem;
+  font-weight: 100;
+  font-family: "Roboto", sans-serif;
+}
+
+@media screen and (max-width: 500px) {
+  body #contact .contactBox {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body #contact .contactBox .left {
+    width: 100vw;
+  }
+  body #contact .contactBox .right {
+    width: 100vw;
+  }
+}
+/*# sourceMappingURL=main.css.map */

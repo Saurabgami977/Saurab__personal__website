@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saurab Gami || Front-End Web Developer</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<!---------------------------------------- Home Page------------------------------------------ -->
+
+<body onload="animate()">
+    <section id="main" class="main">
+        <header class="header">
+            <img id="logo" class="logo" src="img/logo1.png" alt="">
+            <div class="hamBurger" id="hamBurger" onclick="hamburger(this)">
+                <div class="one" id="one"></div>
+                <div class="two" id="two"></div>
+                <div class="three" id="three"></div>
+            </div>
+            <div class="topNavbar" id="topNavbar">
+                <ul id="navUl">
+                    <li class="menu" id="menu"> <a href="#">Home</a> </li>
+                    <li class="menu" id="menu"> <a href="#about">About</a> </li>
+                    <li class="menu" id="menu"> <a href="#contact">Contact</a> </li>
+                </ul>
+            </div>
+        </header>
+        <h1 class="myName" id="myName">Saurab Gami</h1>
+        <p class="myIntro" id="myIntro">Front-End Web Developer</p>
+        <div class="banner-btn" id="banner-btn">
+            <a href="#"><span></span> Read More</a>
+            <a href="#"><span></span> Projects</a>
+        </div>
+    </section>
+
+    <!-------------------------------------------- about page------------------------------------------    -->
+    <section class="about" id="about">
+        <div id="title" class="title">
+            <h5>About me</h5>
+            <h2>Who am I</h2>
+        </div>
+        <div class="aboutMe" id="aboutMe">
+            <div class="introduction" id="introduction">
+                <h2>
+                    Hi. I’m Saurav, nice to meet you. Please take a look around!
+                </h2>
+                <h4>I am passionate about building excellent web apps that improves the lives of those around me. I
+                    specialize in creating websites using plain 'JavaScript'. I am learing 'React JS' What would you do
+                    if you had a good web developer available at your fingertips?</h4>
+                <p>-Get ready to turn your ideas into reality</p>
+            </div>
+            <img class="aboutImg" id="aboutImg" src="./img/about.jpeg" alt="">
+        </div>
+    </section>
+
+    <!-------------------------------------- contact page ------------------------------------------------>
+    <section class="contact" id="contact">
+        <div class="contactBox">
+
+            <div class="left" id="left">
+                <button class="leftBtn" id="leftBtn">
+                    <a href="#">
+                        <p>Continue Exploring?</p>
+                        <h1>Know more about me</h1>
+                    </a>
+                </button>
+            </div>
+            <div class="right" id="right">
+                <button class="rightBtn" id="rightBtn"><a href="#">
+                        <p>Intrested?</p>
+                        <h1>Contact me</h1>
+                    </a>
+                </button>
+
+            </div>
+        </div>
+    </section>
+    <!-- -------------------------------------------------------------------------------------------------->
+</body>
+<script src="index.js"></script>
+
+</html>
