@@ -29,16 +29,21 @@
     font-size: 4rem;
     font-family: $simple-font;
   }
+
+  @media screen and (max-width: 800px) {
+    h2 {
+      font-size: 2rem;
+    }
+  }
 }
 
 #aboutMe {
   display: flex;
   @include d-flex(row, space-evenly, center);
-  flex-wrap: wrap;
   width: 100%;
 
   .introduction {
-    width: 40%;
+    width: 50vw;
 
     h2 {
       font-size: 3rem;
@@ -46,7 +51,7 @@
     }
 
     h4 {
-      font-size: 1.5rem;
+      font-size: 1.2rem;
       font-family: $simple-font;
     }
 
@@ -54,10 +59,11 @@
       font-size: 1.1rem;
       font-family: $simple-font;
     }
+
     @media screen and (max-width: 500px) {
       h2 {
-        font-size: 2rem;
-        line-height: 30px;
+        font-size: 1.4rem;
+        line-height: 20px;
       }
 
       h4 {
@@ -71,21 +77,26 @@
   }
 
   .aboutImg {
-    max-width: 40%;
+    max-width: 50vw;
+    height: 50vh;
     border-radius: 10px;
     clip-path: polygon(6% 22%, 100% 0, 100% 100%, 93% 79%, 0 100%, 0 46%, 0 0);
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 500px), screen and (max-width: 1000px) {
   #aboutMe {
     display: flex;
     @include d-flex(column, center, center);
 
-    .introduction{
-        width: 100vw;
-        padding: 0px 55px;
-        height: 50vh;
+    .introduction {
+      width: 100vw;
+      padding: 0px 20px;
+      height: 30vh;
+    }
+
+    .aboutImg{
+        max-width: 100%;
     }
   }
 }

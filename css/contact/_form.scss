@@ -1,0 +1,43 @@
+h1{
+    font-size: 5rem ;
+}
+
+.form {
+    margin-top: 20px;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  @include d-flex(column, center, center);
+
+  .input{
+      width: 80vw;
+      font-size: 2rem;
+      line-height: 10px;
+      padding: 10px 30px;
+      color: black;
+      border: none;
+      margin: 10px;
+      background: none;
+      outline: none;
+      border-bottom: 2px solid $secondary-color;
+      font-family: $simple-font;
+  }
+
+  .submitButton{
+      width: 10%;
+      padding: 10px;
+      border-radius: 7px;
+      outline: none;
+      border: 2px solid black;
+      color: white;
+      font-size: 2rem;
+      background-color: $secondary-color;
+      transition: 0.5s all ease-in-out;
+
+      &:hover{
+          background-color: $dark-color;
+          color: white;
+          transform: scale(1.2);
+      }
+  }
+}

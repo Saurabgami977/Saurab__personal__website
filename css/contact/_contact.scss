@@ -1,7 +1,7 @@
 .contactBox {
   display: flex;
   @include d-flex("", center, center);
-  width: 100%;
+  width: 100vw;
 
   .left {
     width: 50vw;
@@ -38,7 +38,7 @@
     @include btn($primary-color);
   }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 500px), screen and (max-width: 1000px) {
     .contactBox{
         @include d-flex(column);
 

@@ -17,10 +17,15 @@
 
 body {
   background-color: $primary-color;
-  height: 500vh;
+  height: 400vh;
+  width: 100vw;
+  background-color: $grey-color;
+  overflow-x: hidden;
   z-index: 3;
+  display: flex;
+  @include d-flex(column, space-between, center);
 
-  #main {
+   #main {
     background: linear-gradient(rgba($dark-color, 0.7), #009688),
       url(../img/bg.jpg) center center/cover fixed;
     height: 100vh;
@@ -42,9 +47,18 @@ body {
     @import "about/aboutTitle";
   }
 
-  #contact{
+  #contact {
     height: 100vh;
     width: 100vw;
     @import "contact/contact";
+  }
+
+  #contactForm {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    margin-top: 10px;
+    @include d-flex(column, center, center);
+    @import "contact/form";
   }
 }

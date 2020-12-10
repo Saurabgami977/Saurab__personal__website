@@ -22,8 +22,24 @@
 
 body {
   background-color: white;
-  height: 500vh;
+  height: 400vh;
+  width: 100vw;
+  background-color: #e7e3e3;
+  overflow-x: hidden;
   z-index: 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 body #main {
@@ -341,6 +357,12 @@ body #about .title h2 {
   font-family: "Roboto", sans-serif;
 }
 
+@media screen and (max-width: 800px) {
+  body #about .title h2 {
+    font-size: 2rem;
+  }
+}
+
 body #about #aboutMe {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -355,13 +377,11 @@ body #about #aboutMe {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   width: 100%;
 }
 
 body #about #aboutMe .introduction {
-  width: 40%;
+  width: 50vw;
 }
 
 body #about #aboutMe .introduction h2 {
@@ -370,7 +390,7 @@ body #about #aboutMe .introduction h2 {
 }
 
 body #about #aboutMe .introduction h4 {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-family: "Roboto", sans-serif;
 }
 
@@ -381,8 +401,8 @@ body #about #aboutMe .introduction p {
 
 @media screen and (max-width: 500px) {
   body #about #aboutMe .introduction h2 {
-    font-size: 2rem;
-    line-height: 30px;
+    font-size: 1.4rem;
+    line-height: 20px;
   }
   body #about #aboutMe .introduction h4 {
     font-size: 1.3rem;
@@ -394,13 +414,14 @@ body #about #aboutMe .introduction p {
 }
 
 body #about #aboutMe .aboutImg {
-  max-width: 40%;
+  max-width: 50vw;
+  height: 50vh;
   border-radius: 10px;
   -webkit-clip-path: polygon(6% 22%, 100% 0, 100% 100%, 93% 79%, 0 100%, 0 46%, 0 0);
           clip-path: polygon(6% 22%, 100% 0, 100% 100%, 93% 79%, 0 100%, 0 46%, 0 0);
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 500px), screen and (max-width: 1000px) {
   body #about #aboutMe {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -418,8 +439,11 @@ body #about #aboutMe .aboutImg {
   }
   body #about #aboutMe .introduction {
     width: 100vw;
-    padding: 0px 55px;
-    height: 50vh;
+    padding: 0px 20px;
+    height: 30vh;
+  }
+  body #about #aboutMe .aboutImg {
+    max-width: 100%;
   }
 }
 
@@ -442,7 +466,7 @@ body #contact .contactBox {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100%;
+  width: 100vw;
 }
 
 body #contact .contactBox .left {
@@ -555,7 +579,7 @@ body #contact .contactBox .right button a h1 {
   font-family: "Roboto", sans-serif;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 500px), screen and (max-width: 1000px) {
   body #contact .contactBox {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -574,5 +598,81 @@ body #contact .contactBox .right button a h1 {
   body #contact .contactBox .right {
     width: 100vw;
   }
+}
+
+body #contactForm {
+  height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 10px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body #contactForm h1 {
+  font-size: 5rem;
+}
+
+body #contactForm .form {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body #contactForm .form .input {
+  width: 80vw;
+  font-size: 2rem;
+  line-height: 10px;
+  padding: 10px 30px;
+  color: black;
+  border: none;
+  margin: 10px;
+  background: none;
+  outline: none;
+  border-bottom: 2px solid #009688;
+  font-family: "Roboto", sans-serif;
+}
+
+body #contactForm .form .submitButton {
+  width: 10%;
+  padding: 10px;
+  border-radius: 7px;
+  outline: none;
+  border: 2px solid black;
+  color: white;
+  font-size: 2rem;
+  background-color: #009688;
+  -webkit-transition: 0.5s all ease-in-out;
+  transition: 0.5s all ease-in-out;
+}
+
+body #contactForm .form .submitButton:hover {
+  background-color: black;
+  color: white;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 /*# sourceMappingURL=main.css.map */
