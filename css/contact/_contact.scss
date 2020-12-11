@@ -43,7 +43,7 @@
   .contactBox {
     display: flex;
     @include d-flex(column, space-between);
-    // height: 200vh;
+    height: 200vh;
     
     .left {
       width: 100vw;
