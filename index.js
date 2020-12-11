@@ -20,11 +20,18 @@ document.addEventListener('scroll', (e) => {
 })
 
 // hamBurger menu toggle
-function hamburger(x){
-    x.classList.toggle('change')
-    if(x.classList.contains('change')){
+function hamburger(x) {
+    x.classList.toggle('change');
+    if (x.classList.contains('change')) {
         document.querySelector('.topNavbar').style.right = '0';
-    }else{
+    } else {
         document.querySelector('.topNavbar').style.right = '-500px';
     }
 }
+
+document.querySelectorAll('.menu').forEach(element => {
+    element.addEventListener('click', () => {
+        document.getElementById('hamBurger').classList.toggle('change')
+        document.querySelector('.topNavbar').style.right = '-500px';
+    })
+})
