@@ -22,24 +22,10 @@
 
 body {
   background-color: white;
-  height: 400vh;
   width: 100vw;
   background-color: #e7e3e3;
   overflow-x: hidden;
   z-index: 3;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 body #main {
@@ -317,7 +303,6 @@ body #main .banner-btn a span {
 body #about {
   height: 100vh;
   width: 100vw;
-  background-color: #e7e3e3;
   margin: 0px auto;
   padding: 70px 0;
 }
@@ -456,10 +441,10 @@ body #contact .contactBox {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: "";
-          flex-direction: "";
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -467,6 +452,7 @@ body #contact .contactBox {
       -ms-flex-align: center;
           align-items: center;
   width: 100vw;
+  height: 100vh;
 }
 
 body #contact .contactBox .left {
@@ -581,21 +567,26 @@ body #contact .contactBox .right button a h1 {
 
 @media screen and (max-width: 500px), screen and (max-width: 1000px) {
   body #contact .contactBox {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
   }
   body #contact .contactBox .left {
     width: 100vw;
+    height: 100vh;
   }
   body #contact .contactBox .right {
+    height: 100vh;
     width: 100vw;
   }
 }
@@ -603,33 +594,21 @@ body #contact .contactBox .right button a h1 {
 body #contactForm {
   height: 100vh;
   width: 100vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   margin-top: 10px;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  padding: 70px 0;
 }
 
 body #contactForm h1 {
   font-size: 5rem;
+  text-align: center;
 }
 
 body #contactForm .form {
-  margin-top: 20px;
+  padding: 20px;
+  width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100vw;
-  height: 100vh;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -674,5 +653,22 @@ body #contactForm .form .submitButton:hover {
   color: white;
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
+}
+
+@media screen and (max-width: 1000px) {
+  body #contactForm .form .input {
+    padding: 2px;
+    line-height: 0px;
+    font-size: 1rem;
+  }
+  body #contactForm .form .submitButton {
+    width: 20%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  body #contactForm .form .submitButton {
+    width: 50%;
+  }
 }
 /*# sourceMappingURL=main.css.map */

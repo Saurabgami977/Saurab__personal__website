@@ -1,7 +1,8 @@
 .contactBox {
   display: flex;
-  @include d-flex("", center, center);
+  @include d-flex(row, center, center);
   width: 100vw;
+  height: 100vh;
 
   .left {
     width: 50vw;
@@ -39,14 +40,18 @@
   }
 }
 @media screen and (max-width: 500px), screen and (max-width: 1000px) {
-    .contactBox{
-        @include d-flex(column);
-
-        .left{
-            width: 100vw;
-        }
-        .right{
-            width: 100vw;
-        }
+  .contactBox {
+    display: flex;
+    @include d-flex(column, space-between);
+    // height: 200vh;
+    
+    .left {
+      width: 100vw;
+      height: 100vh;
     }
+    .right {
+      height: 100vh;
+      width: 100vw;
+    }
+  }
 }

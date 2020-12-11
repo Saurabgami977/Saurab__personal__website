@@ -17,13 +17,13 @@
 
 body {
   background-color: $primary-color;
-  height: 400vh;
   width: 100vw;
+  // height: 600vh;
   background-color: $grey-color;
   overflow-x: hidden;
   z-index: 3;
-  display: flex;
-  @include d-flex(column, space-between, center);
+  // display: flex;
+  // @include d-flex(column, space-between, center);
 
    #main {
     background: linear-gradient(rgba($dark-color, 0.7), #009688),
@@ -41,7 +41,6 @@ body {
   #about {
     height: 100vh;
     width: 100vw;
-    background-color: $grey-color;
     margin: 0px auto;
     padding: 70px 0;
     @import "about/aboutTitle";
@@ -56,9 +55,8 @@ body {
   #contactForm {
     height: 100vh;
     width: 100vw;
-    display: flex;
     margin-top: 10px;
-    @include d-flex(column, center, center);
+    padding: 70px 0;
     @import "contact/form";
   }
 }
